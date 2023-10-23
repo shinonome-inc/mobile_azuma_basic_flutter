@@ -8,7 +8,7 @@ void janken() {
   }
 
   print("じゃんけんの手を入力...（0:グー, 1:チョキ, 2:パー");
-  var userInput = stdin.readLineSync() ?? '';
+  var userInput = stdin.readLineSync();
 
   if (userInput == null || int.tryParse(userInput) == null ||
       int.parse(userInput) < 0 || int.parse(userInput) > 2) {
