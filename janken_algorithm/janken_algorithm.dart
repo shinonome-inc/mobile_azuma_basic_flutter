@@ -2,21 +2,22 @@ import 'dart:io';
 import 'dart:math';
 
 void janken() {
-  var jankenHand = ["グー", "チョキ", "パー"];
+  List<String> jankenHand = ["グー", "チョキ", "パー"];
   for (var i = 0; i < jankenHand.length; i++) {
     print("$i: ${jankenHand[i]}");
   }
 
   print("じゃんけんの手を入力...（0:グー, 1:チョキ, 2:パー");
-  var userInput = stdin.readLineSync();
+  String? userInput = stdin.readLineSync();
 
-  if (userInput == null || int.tryParse(userInput) == null ||
-      int.parse(userInput) < 0 || int.parse(userInput) > 2) {
+  int? number = int.tryParse(userInput ?? '');
+  if (number == null || number < 0 || number > 2) {
     print("0,1,2のいずれかを入力してください");
     return;
   }
 
-  int userChoice = int.parse(userInput);
+
+  int userChoice = number;
   int computerChoice = Random().nextInt(3);
 
   print("あなたが選んだ手: ${jankenHand[userChoice]}");
