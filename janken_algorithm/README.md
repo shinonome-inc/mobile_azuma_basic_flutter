@@ -1,4 +1,4 @@
-# じゃんけんアルゴリズム
++# じゃんけんアルゴリズム
 `janken_algorithm.dart`を編集してください。
 
 AndroidStudioなどでファイルを編集した後、
