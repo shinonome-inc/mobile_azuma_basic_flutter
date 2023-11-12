@@ -2,12 +2,14 @@ import 'dart:io';
 import 'dart:math';
 
 void janken() {
+
   List<String> jankenHand = ["グー", "チョキ", "パー"];
   for (var i = 0; i < jankenHand.length; i++) {
     print("$i: ${jankenHand[i]}");
   }
 
   print("じゃんけんの手を入力...（0:グー, 1:チョキ, 2:パー");
+
   String? userInput = stdin.readLineSync();
 
   int? number = int.tryParse(userInput ?? '');
@@ -18,6 +20,7 @@ void janken() {
 
 
   int userChoice = number;
+
   int computerChoice = Random().nextInt(3);
 
   print("あなたが選んだ手: ${jankenHand[userChoice]}");
