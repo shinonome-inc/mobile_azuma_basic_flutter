@@ -13,6 +13,7 @@ class JankenGame {
     if (userChoice == computerChoice) {
       result = "あいこ";
     } else if ((userChoice == 0 && computerChoice == 1) ||
+        (userChoice == 1 && computerChoice == 2) ||
         (userChoice == 2 && computerChoice == 0)) {
       result = "あなたの勝ち";
     } else {
