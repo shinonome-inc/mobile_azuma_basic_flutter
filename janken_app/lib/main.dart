@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'janken_algorithm.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,18 +15,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: JankenPage(),
+      home: const JankenPage(),
     );
   }
 }
 
 //StatefulWidget：Stateオブジェクトを通じて状態を管理
 class JankenPage extends StatefulWidget {
+  const JankenPage({Key? key}) : super(key: key);
   @override
-  _JankenPageState createState() => _JankenPageState();
+  JankenPageState createState() => JankenPageState();
 }
 
-class _JankenPageState extends State<JankenPage> {
+class JankenPageState extends State<JankenPage> {
   String message = "じゃんけん...";
   // final：一度final とつけた変数に値を入れたなら、再代入はできない
   final JankenGame game = JankenGame();
@@ -39,7 +41,7 @@ class _JankenPageState extends State<JankenPage> {
         isGameActive = false; // ゲームの状態を非アクティブに更新
       });
 
-      Timer(Duration(seconds: 3), () {
+      Timer(const Duration(seconds: 3), () {
         setState(() {
           message = "じゃんけん...";
           isGameActive = true; // ゲームの状態を再びアクティブに更新
@@ -52,7 +54,7 @@ class _JankenPageState extends State<JankenPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('じゃんけんアプリ'),
+        title: const Text('じゃんけんアプリ'),
       ),
       body: Center(
         child: Column(
@@ -60,7 +62,7 @@ class _JankenPageState extends State<JankenPage> {
           children: <Widget>[
             Text(
               message,
-              style: TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24),
             ),
             Row(
               //MainAxisAlignment:余白均等
@@ -72,18 +74,18 @@ class _JankenPageState extends State<JankenPage> {
                   onPressed: isGameActive
                       ? () => playGame(0)
                       : null, // ゲーム状態に基づくボタンの有効化/無効化
-                  child: Text('グー'),
+                  child: const Text('グー'),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 ElevatedButton(
                   // 条件 ? 真の場合の式 : 偽の場合の式
                   onPressed: isGameActive ? () => playGame(1) : null,
-                  child: Text('チョキ'),
+                  child: const Text('チョキ'),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 ElevatedButton(
                   onPressed: isGameActive ? () => playGame(2) : null,
-                  child: Text('パー'),
+                  child: const Text('パー'),
                 ),
               ],
             ),
