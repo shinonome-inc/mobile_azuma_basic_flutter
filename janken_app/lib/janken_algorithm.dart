@@ -9,16 +9,14 @@ class JankenGame {
     List<String> jankenHand = ["グー", "チョキ", "パー"];
     int computerChoice = Random().nextInt(3);
 
-    String result;
     if (userChoice == computerChoice) {
-      result = "あいこ";
-    } else if ((userChoice == 0 && computerChoice == 1) ||
-        (userChoice == 1 && computerChoice == 2) ||
-        (userChoice == 2 && computerChoice == 0)) {
-      result = "あなたの勝ち";
-    } else {
-      result = "あなたの負け";
+      return "あいこ";
     }
+    bool userWinorLose = (userChoice == 0 && computerChoice == 1) ||
+        (userChoice == 1 && computerChoice == 2) ||
+        (userChoice == 2 && computerChoice == 0);
+
+    String result = userWinorLose ? "あなたの勝ち" : "あなたの負け";
     return "あなたの手: ${jankenHand[userChoice]}, \n コンピュータの手: ${jankenHand[computerChoice]}, \n 結果: $result";
   }
 }
