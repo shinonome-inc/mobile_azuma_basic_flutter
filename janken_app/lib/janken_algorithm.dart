@@ -10,13 +10,13 @@ class JankenGame {
     int computerChoice = Random().nextInt(3);
 
     if (userChoice == computerChoice) {
-      return "あいこ";
+      return "あなたの手: ${jankenHand[userChoice]}, \n コンピュータの手: ${jankenHand[computerChoice]}, \n 結果: あいこ";
     }
-    bool userWinorLose = (userChoice == 0 && computerChoice == 1) ||
+    bool isUserWinner = (userChoice == 0 && computerChoice == 1) ||
         (userChoice == 1 && computerChoice == 2) ||
         (userChoice == 2 && computerChoice == 0);
 
-    String result = userWinorLose ? "あなたの勝ち" : "あなたの負け";
+    String result = isUserWinner ? "あなたの勝ち" : "あなたの負け";
     return "あなたの手: ${jankenHand[userChoice]}, \n コンピュータの手: ${jankenHand[computerChoice]}, \n 結果: $result";
   }
 }
