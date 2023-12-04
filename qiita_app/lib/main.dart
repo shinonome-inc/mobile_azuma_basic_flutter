@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'qiita_app',
       theme: ThemeData(),
-      home: MyHomePage(title: 'Qiita Feed App'),
+      home: const MyHomePage(title: 'Qiita Feed App'),
     );
   }
 }
