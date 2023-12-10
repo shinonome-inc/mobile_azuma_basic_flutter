@@ -40,53 +40,41 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         child: Column(
           children: [
-            const Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'Qiita Feed App',
-                      style: TextStyle(
-                        fontFamily: 'Pacifico',
-                        fontSize: 36,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Text(
-                      'Play Ground',
-                      style: TextStyle(
-                        fontFamily: 'Noto Sans JP',
-                        fontSize: 14,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+            const Spacer(),
+            const Text(
+              'Qiita Feed App',
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 36,
+                color: Colors.white,
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                CustomButton(
-                  text: "ログイン",
-                  backgroundColor: const Color.fromRGBO(70, 131, 0, 1),
-                  elevation: 2,
-                  onPressed: () {},
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                CustomButton(
-                  text: "ログインせずに利用する",
-                  backgroundColor: Colors.transparent,
-                  textColor: Colors.white,
-                  elevation: 0,
-                  onPressed: () {},
-                ),
-                const SizedBox(height: 64),
-              ],
+            const Text(
+              'Play Ground',
+              style: TextStyle(
+                fontFamily: 'Noto Sans JP',
+                fontSize: 14,
+                color: Colors.white,
+              ),
             ),
+            const Spacer(),
+            CustomButton(
+              text: "ログイン",
+              backgroundColor: const Color.fromRGBO(70, 131, 0, 1),
+              elevation: 2,
+              onPressed: () {},
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            CustomButton(
+              text: "ログインせずに利用する",
+              backgroundColor: Colors.transparent,
+              textColor: Colors.white,
+              elevation: 0,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 64),
           ],
         ),
       ),
