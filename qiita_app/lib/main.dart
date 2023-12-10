@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 CustomButton(
                   text: "ログイン",
-                  backgroundColor: const Color.fromRGBO(70, 131, 0, 1),
+                  backgroundColor: Color.fromRGBO(70, 131, 0, 1),
                   elevation: 2,
                   onPressed: () {},
                 ),
