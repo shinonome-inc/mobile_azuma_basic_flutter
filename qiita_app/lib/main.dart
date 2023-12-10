@@ -41,28 +41,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             const Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    'Qiita Feed App',
-                    style: TextStyle(
-                      fontFamily: 'Pacifico',
-                      fontSize: 36,
-                      color: Colors.white,
-                    ),
+              child: Center(
+                child: Text(
+                  'Qiita Feed App',
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 36,
+                    color: Colors.white,
                   ),
-                  Text(
-                    'Play Ground',
-                    style: TextStyle(
-                      fontFamily: 'Noto Sans JP',
-                      fontSize: 14,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
+
+
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
