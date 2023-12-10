@@ -41,28 +41,26 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             const Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'Qiita Feed App',
-                      style: TextStyle(
-                        fontFamily: 'Pacifico',
-                        fontSize: 36,
-                        color: Colors.white,
-                      ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Qiita Feed App',
+                    style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontSize: 36,
+                      color: Colors.white,
                     ),
-                    Text(
-                      'Play Ground',
-                      style: TextStyle(
-                        fontFamily: 'Noto Sans JP',
-                        fontSize: 14,
-                        color: Colors.white,
-                      ),
+                  ),
+                  Text(
+                    'Play Ground',
+                    style: TextStyle(
+                      fontFamily: 'Noto Sans JP',
+                      fontSize: 14,
+                      color: Colors.white,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             Column(
@@ -70,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 CustomButton(
                   text: "ログイン",
-                  backgroundColor: Color.fromRGBO(70, 131, 0, 1),
+                  backgroundColor: const Color.fromRGBO(70, 131, 0, 1),
                   elevation: 2,
                   onPressed: () {},
                 ),
