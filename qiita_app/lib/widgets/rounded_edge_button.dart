@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class RoundedEdgeButton extends StatelessWidget {
   final String text;
   final Color backgroundColor;
   final Color textColor;
   final VoidCallback onPressed;
   final double elevation;
 
-  const CustomButton({
+  const RoundedEdgeButton({
     Key? key,
     required this.text,
     this.backgroundColor = Colors.green,
