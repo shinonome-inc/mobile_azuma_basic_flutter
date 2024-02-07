@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:qiita_app/constants/app_colors.dart';
+import 'package:qiita_app/pages/feed_page.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -11,14 +13,12 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
+    FeedPage(),
     Text(
-      'Index 0: feed',
+      'Index 1: tag',
     ),
     Text(
-      'Index 1: Business',
-    ),
-    Text(
-      'Index 2: School',
+      'Index 2: mypage',
     ),
     Text(
       'Index 3: Settings',
@@ -56,8 +56,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ],
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
-        unselectedItemColor: const Color.fromRGBO(130, 130, 130, 1),
-        selectedItemColor: const Color.fromRGBO(116, 193, 58, 1),
+        unselectedItemColor: AppColors.secondary,
+        selectedItemColor: AppColors.primary,
         onTap: _onItemTapped,
       ),
     );

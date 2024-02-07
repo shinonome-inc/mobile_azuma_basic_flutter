@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qiita_app/constants/app_colors.dart';
 
 class RoundedEdgeButton extends StatelessWidget {
   final String text;
@@ -10,8 +11,8 @@ class RoundedEdgeButton extends StatelessWidget {
   const RoundedEdgeButton({
     Key? key,
     required this.text,
-    this.backgroundColor = Colors.green,
-    this.textColor = Colors.white,
+    this.backgroundColor = AppColors.darkgreen,
+    this.textColor = AppColors.white,
     required this.onPressed,
     this.elevation = 2.0,
   }) : super(key: key);
