@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qiita_app/pages/feed_page.dart';
 import 'package:qiita_app/widgets/rounded_edge_button.dart';
 
 class TopPage extends StatefulWidget {
@@ -45,7 +46,10 @@ class _TopPageState extends State<TopPage> {
               text: "ログイン",
               backgroundColor: const Color.fromRGBO(70, 131, 0, 1),
               elevation: 2,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const FeedPage()));
+              },
             ),
             const SizedBox(
               height: 16,
