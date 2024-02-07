@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'pages/top_page.dart';
-
 import 'repository/qiita_repository.dart';
 
 void main() {
