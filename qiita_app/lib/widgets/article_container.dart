@@ -54,7 +54,7 @@ class ArticleContainer extends StatelessWidget {
                     ),
                     const SizedBox(width: 4),
                     Text(
-                      '投稿日：${article.postedDate}',
+                      '投稿日:${article.postedDate}',
                       style: const TextStyle(
                         fontSize: 12,
                         color: AppColors.secondary,

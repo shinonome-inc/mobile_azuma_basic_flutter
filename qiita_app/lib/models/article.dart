@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class Article {
   final String title;
   final String userIconUrl;
@@ -14,11 +16,15 @@ class Article {
   });
 
   factory Article.fromJson(Map<String, dynamic> json) {
+    final DateFormat formatter = DateFormat('yyyy/MM/dd');
+    final DateTime dateTime = DateTime.parse(json['created_at']);
+    final String formattedDate = formatter.format(dateTime);
+
     return Article(
       title: json['title'] as String,
       userIconUrl: json['user']['profile_image_url'],
       userName: json['user']['id'] as String,
-      postedDate: json['created_at'],
+      postedDate: formattedDate,
       likesCount: json['likes_count'] ?? 0,
     );
   }
